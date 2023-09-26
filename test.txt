@@ -1,0 +1,6 @@
+olek = olek + 1
+n = 45    - 5.67
+true != false
+before = 0
+# test comment
+after = 1
