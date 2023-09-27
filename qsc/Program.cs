@@ -1,4 +1,4 @@
-﻿using qsc;
+﻿using qsc.LexerSpace;
 
 var filename = Environment.GetCommandLineArgs()[1];
 Lexer lexer = new(filename);

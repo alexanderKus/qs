@@ -1,9 +1,9 @@
-﻿namespace qsc;
+﻿namespace qsc.LexerSpace;
 
-public sealed class Real : Token
+internal sealed class Real : Token
 {
-	public Real(float value) : base(qsc.Tag.REAL)
-	{
+    public Real(float value) : base(LexerSpace.Tag.REAL)
+    {
         Value = value;
     }
 
