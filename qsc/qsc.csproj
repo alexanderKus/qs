@@ -8,13 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="LexerSpace\" />
-    <None Remove="SymbolsSpace\" />
-    <None Remove="ParserSpace\" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="LexerSpace\" />
     <Folder Include="SymbolsSpace\" />
     <Folder Include="ParserSpace\" />
+    <Folder Include="SourceSpace\" />
   </ItemGroup>
 </Project>

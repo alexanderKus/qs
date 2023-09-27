@@ -1,15 +1,17 @@
 ﻿using System.Text;
+using qsc.SourceSpace;
 
 namespace qsc.LexerSpace;
 
 internal sealed class Lexer
 {
-    private readonly Source _source;
+    private readonly ISource _source;
     private readonly Dictionary<string, Word> _words = new();
     private char _peek = ' ';
 
-    public Lexer(string filename)
+    public Lexer(ISource source)
     {
+        _source = source;
         Reserve(new Word(Tag.IF, "if"));
         Reserve(new Word(Tag.ELSE, "else"));
         Reserve(new Word(Tag.DO, "do"));
@@ -18,7 +20,6 @@ internal sealed class Lexer
         Reserve(Word.TRUE);
         Reserve(Word.FALSE);
         // TODO: reserve words for types
-        _source = new Source(filename);
     }
 
     public int Line { get; set; }

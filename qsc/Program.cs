@@ -1,7 +1,8 @@
 ﻿using qsc.LexerSpace;
+using qsc.SourceSpace;
 
-var filename = Environment.GetCommandLineArgs()[1];
-Lexer lexer = new(filename);
+ISource source = new ExampleSource();
+Lexer lexer = new(source);
 while (true)
 {
     try

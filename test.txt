@@ -1,6 +1,0 @@
-# Test file <this comment will be skiped by lexer>
-if(x<1)
-x = true
-y <= 195
-aleksander = "aleksander"
-
