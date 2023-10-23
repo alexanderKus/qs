@@ -19,10 +19,13 @@ internal sealed class Lexer
         Reserve(new Word(Tag.BREAK, "break"));
         Reserve(Word.TRUE);
         Reserve(Word.FALSE);
-        // TODO: reserve words for types
+        Reserve(SymbolsSpace.Type.INT);
+        Reserve(SymbolsSpace.Type.CHAR);
+        Reserve(SymbolsSpace.Type.FLOAT);
+        Reserve(SymbolsSpace.Type.BOOL);
     }
 
-    public int Line { get; set; }
+    public static int Line { get; set; } = 1;
 
     private void Reserve(Word token)
         => _words.Add(token.Lexeme, token);

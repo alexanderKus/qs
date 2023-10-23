@@ -1,6 +1,6 @@
 ﻿namespace qsc.LexerSpace;
 
-internal sealed class Word : Token
+internal class Word : Token
 {
     public Word(int tag, string lexeme) : base(tag)
         => Lexeme = lexeme;

@@ -1,16 +1,17 @@
-﻿using qsc.LexerSpace;
+﻿using qsc.InterSpace;
+using qsc.LexerSpace;
 
 namespace qsc.SymbolsSpace;
 
 internal sealed class Env
 {
-    private readonly Dictionary<Token, object> _table = new(); // TODO: object -> class Id
+    private readonly Dictionary<Token, Id> _table = new();
     private Env? _prev;
 
     public Env(Env? n = null)
         => _prev = n;
 
-    public void Put(Token w, object i) // TODO: object -> class Id
+    public void Put(Token w, Id i)
         => _table.Add(w, i);
 
     public object? Get(Token w)
