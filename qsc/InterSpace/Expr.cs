@@ -30,7 +30,7 @@ internal class Expr : Node
         }
         else if (f != 0)
         {
-            Emit($"ifflase {test} goto L{f}");
+            Emit($"iffalse {test} goto L{f}"); // TODO: make sure that 'iffalse' is correct
         }
         // fall through
     }
