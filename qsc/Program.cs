@@ -1,17 +1,18 @@
-﻿using qsc.LexerSpace;
+﻿using qsc;
+using qsc.LexerSpace;
 using qsc.SourceSpace;
 
-ISource source = new ExampleSource();
-Lexer lexer = new(source);
-while (true)
+var argv = Environment.GetCommandLineArgs();
+
+if (argv.Length < 2)
 {
-    try
-    {
-        Token token = lexer.Scan();
-        Console.WriteLine($"token: {token}");
-    }
-    catch
-    {
-        break;
-    }
+    Console.WriteLine("Usage: qsc <file>");
 }
+
+var sourceFile = argv[1];
+var sourceCode = File.ReadAllText(sourceFile).ToCharArray();
+Console.WriteLine(sourceCode);
+ISource source = new SourceCode(sourceCode);
+Lexer lexer = new(source);
+Parser parser = new(lexer);
+parser.Program();

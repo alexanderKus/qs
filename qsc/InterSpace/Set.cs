@@ -8,7 +8,7 @@ internal sealed class Set : Stmt
     {
         Id = i;
         Expr = x;
-        if (Check(Id.Type, x.Type) is null) 
+        if (Check(Id.Type, x.Type) is null)
             Error("Type error");
     }
 

@@ -14,7 +14,4 @@
     <Folder Include="SourceSpace\" />
     <Folder Include="InterSpace\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="InterSpace\" />
-  </ItemGroup>
 </Project>

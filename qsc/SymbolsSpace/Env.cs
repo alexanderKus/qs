@@ -14,7 +14,7 @@ internal sealed class Env
     public void Put(Token w, Id i)
         => _table.Add(w, i);
 
-    public object? Get(Token w)
+    public Id? Get(Token w)
     {
         for (Env e = this; e != null; e = e._prev!)
         {

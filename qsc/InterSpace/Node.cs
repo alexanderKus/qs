@@ -12,10 +12,10 @@ internal class Node
 
     public void Error(string msg)
         => throw new Exception($"Near line {_lexLine}: {msg}");
-    public static int NewLabel()
+    public int NewLabel()
         => ++Labels;
-    public static void EmitLabel(int i)
+    public void EmitLabel(int i)
         => Console.Write($"L{i}:");
-    public static void Emit(string s)
+    public void Emit(string s)
         => Console.WriteLine($"\t{s}");
 }

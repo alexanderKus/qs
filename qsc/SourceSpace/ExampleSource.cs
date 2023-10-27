@@ -1,6 +1,6 @@
 ﻿namespace qsc.SourceSpace;
 
-public sealed class ExampleSource: ISource
+public sealed class ExampleSource : ISource
 {
     public char[] Text { get; } = @"
 #Test file <this comment will be skiped by lexer>

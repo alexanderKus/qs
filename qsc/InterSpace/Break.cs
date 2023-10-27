@@ -4,7 +4,7 @@ internal sealed class Break : Stmt
 {
     public Break()
     {
-        if (Stmt.Enclosing is null) 
+        if (Stmt.Enclosing is null)
             Error("Unenclosed break");
         Stmt = Stmt.Enclosing!;
     }

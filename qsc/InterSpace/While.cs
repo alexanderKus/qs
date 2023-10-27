@@ -13,10 +13,10 @@ internal sealed class While : Stmt
 
     public void Init(Expr x, Stmt s)
     {
-      Expr = x;
-      Stmt = s;
-      if (Expr.Type != Type.BOOL)
-          Expr.Error("Boolean required in while");
+        Expr = x;
+        Stmt = s;
+        if (Expr.Type != Type.BOOL)
+            Expr.Error("Boolean required in while");
     }
 
     public void Gen(int before, int after)
